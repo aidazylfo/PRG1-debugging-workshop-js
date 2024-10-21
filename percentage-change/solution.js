@@ -1,10 +1,37 @@
-function calculatePercentageDifference(original, newAmount) {
-  const difference = Math.abs(newAmount - original);
-  const average = (original - newAmount) / 2;
-  const percentageDifference = (average / difference) * 100;
-  return percentageDifference.toFixed(2);
+function calculatePercentageChange(original, newAmount) {
+ if(original === 0) {
+   return 0; 
+ }
+ const Change = (newAmount - original);
+ const percentageChange = (Change / original) * 100;
+ return Math.ceil(percentageChange)
 }
 
-module.exports = { calculatePercentageDifference };
+module.exports = { calculatePercentageChange };
 
-calculatePercentageDifference(50, 40); // should return -20 as there's been a 20% decrease from 50 to 40
+calculatePercentageChange(50, 40);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
